@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Are You Sure?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #2c003e);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    .glow-heart {
+      font-size: 60px;
+      animation: pulse 2s infinite ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    .glow-text {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 36px;
+      color: #ff80ab;
+      text-shadow: 0 0 10px #ff4081, 0 0 20px #f50057;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffc1e3;
+      text-shadow: 0 0 8px #e91e63;
+      margin-bottom: 40px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); color: #f06292; }
+      50% { transform: scale(1.1); color: #ff4081; }
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #f06292;
+      background: linear-gradient(135deg, #ff4081, #c51162);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff4081;
+    }
+
+    @media (max-width: 500px) {
+      .button-group {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glow-heart">💔</div>
+    <div class="glow-text">Oh... I see you have a boyfriend.</div>
+    <p class="question">Umm... okay then. <br>Can he really keep you happy for the rest of your life? 🤔</p>
+    <div class="button-group">
+      <a href="yesboy.html" class="btn">Yes</a>
+      <a href="o.html" class="btn">No</a>
+    </div>
+  </div>
+</body>
+</html>
