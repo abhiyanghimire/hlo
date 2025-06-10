@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Love Question</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    @keyframes floatStar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px) rotate(15deg); }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #5a2a83;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .floating-star {
+      font-size: 60px;
+      color: #f8b500;
+      animation: floatStar 3s ease-in-out infinite;
+      margin-bottom: 25px;
+      text-shadow: 0 0 12px #f8b500;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 55px 50px;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px rgba(90, 42, 131, 0.4);
+      max-width: 520px;
+      width: 90%;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 46px;
+      margin-bottom: 20px;
+      color: #5a2a83;
+      text-shadow: 0 0 15px #a56cc1;
+      letter-spacing: 1.3px;
+    }
+
+    p {
+      font-size: 22px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      color: #5a2a83;
+      text-shadow: 0 0 8px #c8a2f3;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 16px 36px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.35s ease;
+      box-shadow: 0 0 18px rgba(90, 42, 131, 0.4);
+      color: white;
+      background: linear-gradient(135deg, #7b3fbd, #5a2a83);
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 20%, transparent 70%);
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+      pointer-events: none;
+      border-radius: 50px;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+    }
+
+    .btn-yes {
+      background: linear-gradient(135deg, #9c27b0, #7b3fbd);
+      box-shadow: 0 0 25px #7b3fbd;
+    }
+
+    .btn-yes:hover {
+      background: linear-gradient(135deg, #7b3fbd, #9c27b0);
+      box-shadow: 0 0 35px #a56cc1;
+      transform: scale(1.07);
+    }
+
+    .btn-no {
+      background: linear-gradient(135deg, #ba68c8, #9c27b0);
+      box-shadow: 0 0 25px #9c27b0;
+    }
+
+    .btn-no:hover {
+      background: linear-gradient(135deg, #9c27b0, #ba68c8);
+      box-shadow: 0 0 35px #c8a2f3;
+      transform: scale(1.07);
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="floating-star">⭐️✨</div>
+    <h1>Love Question</h1>
+    <p>Are you interested in someone whose name starts with <strong>A 😏</strong>? 💕</p>
+    <div class="button-group">
+      <a href="love_yes.html" class="btn btn-yes">💘 Yes</a>
+      <a href="love_no.html" class="btn btn-no">💔 No</a>
+    </div>
+  </div>
+</body>
+</html>

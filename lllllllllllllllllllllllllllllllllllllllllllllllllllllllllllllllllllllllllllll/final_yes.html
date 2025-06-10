@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Love You Too!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6f0, #ffb3d9);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Dancing Script', cursive;
+      color: #d6336c;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 15px #ff69b4;
+      margin: 0;
+      z-index: 10;
+    }
+
+    /* Flower petals container */
+    .petals {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .petal {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://i.postimg.cc/fLb2q4Km/petal.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation-name: fall, sway;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    /* Flower petal falling animation */
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Sway left-right while falling */
+    @keyframes sway {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ohh! I love you too, Sanu, mero paran,mayalu,susmi,pudki,pukuli.
+    aasimai lasivam esimiu susimusmi 💖</h1>
+
+  <div class="petals" aria-hidden="true"></div>
+
+  <script>
+    const petalsContainer = document.querySelector('.petals');
+    const petalCount = 30;
+
+    for(let i = 0; i < petalCount; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+
+      // Random horizontal start position
+      petal.style.left = Math.random() * 100 + 'vw';
+
+      // Random animation duration and delay for natural effect
+      petal.style.animationDuration = (5 + Math.random() * 5) + 's, ' + (2 + Math.random() * 3) + 's';
+      petal.style.animationDelay = (Math.random() * 5) + 's, ' + (Math.random() * 5) + 's';
+
+      petalsContainer.appendChild(petal);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matters of the Heart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    @keyframes floatHeart {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle heart shapes in background */
+    body::before {
+      content: '❤';
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-size: 120px;
+      color: rgba(255, 182, 193, 0.15);
+      transform: rotate(-15deg);
+      pointer-events: none;
+      user-select: none;
+    }
+    body::after {
+      content: '❤';
+      position: absolute;
+      bottom: 15%;
+      right: 15%;
+      font-size: 180px;
+      color: rgba(255, 105, 180, 0.12);
+      transform: rotate(20deg);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .floating-heart {
+      font-size: 60px;
+      color: #ff69b4;
+      animation: floatHeart 3s ease-in-out infinite;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff69b4;
+    }
+
+    .card {
+      background: rgba(255, 192, 203, 0.25);
+      border: 1px solid rgba(255, 182, 193, 0.45);
+      padding: 55px 45px;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+      max-width: 560px;
+      width: 90%;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      margin-bottom: 25px;
+      color: #ffe4e1;
+      text-shadow: 0 0 20px #ffb6c1;
+      letter-spacing: 1.5px;
+    }
+
+    p {
+      font-size: 22px;
+      margin-bottom: 45px;
+      font-weight: 600;
+      color: #ffe4e1;
+      text-shadow: 0 0 8px #ff69b4;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 19px;
+      padding: 16px 38px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 25px rgba(255, 182, 193, 0.7);
+      transition: all 0.4s ease;
+      background: linear-gradient(135deg, #ff85b3, #ff4d9c);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.4) 20%, transparent 70%);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+    }
+
+    .btn-single {
+      background: linear-gradient(135deg, #ff9ecb, #ff4d9c);
+      box-shadow: 0 0 30px #ff4d9c;
+    }
+
+    .btn-single:hover {
+      background: linear-gradient(135deg, #ff4d9c, #ff9ecb);
+      box-shadow: 0 0 40px #ff9ecb;
+      transform: scale(1.08);
+    }
+
+    .btn-boyfriend {
+      background: linear-gradient(135deg, #d46ca3, #b34377);
+      box-shadow: 0 0 30px #b34377;
+    }
+
+    .btn-boyfriend:hover {
+      background: linear-gradient(135deg, #b34377, #d46ca3);
+      box-shadow: 0 0 40px #d46ca3;
+      transform: scale(1.08);
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="floating-heart">💘</div>
+    <h1>💕 Matters of the Heart</h1>
+    <p>Are you single, or do you have a boyfriend?</p>
+    <div class="button-group">
+      <a href="single.html" class="btn btn-single">💖 I'm Single</a>
+      <a href="yep.html" class="btn btn-boyfriend">💑 I have a boyfriend</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Is It Me?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      animation: pulseBackground 6s ease-in-out infinite;
+    }
+
+    @keyframes pulseBackground {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(255, 75, 43, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 48px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px #ff6f61;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px #ff8570;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 14px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      color: white;
+      box-shadow: 0 0 20px #ff4b2b;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 30px #ff512f;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 500px) {
+      .button-group {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Let me introduce myself ✨</h1>
+    <p>My name is <strong>Abhiyan Ghimire</strong>. See, my name starts with <strong>A</strong>.<br>Is it me who you love? 💖</p>
+    <div class="button-group">
+      <a href="final_yes.html" class="btn">Yes</a>
+   
+    </div>
+  </div>
+</body>
+</html>
